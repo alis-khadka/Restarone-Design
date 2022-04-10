@@ -1,6 +1,7 @@
 .main-container {
   background: #082847 0% 0% no-repeat padding-box;
   opacity: 1;
+  position: absolute;
 }
 
 .translucent-background {
@@ -17,6 +18,10 @@
   font-size: 0.8rem;
 }
 
+.heading-font {
+  font: 60px Orbitron !important;
+  font-weight: 1000;
+}
 /* NavBar: START */
 
 .navbar {
@@ -123,86 +128,32 @@ button.navbar-toggler:not(.collapsed) div:nth-child(2) {
 
 /* Body: START */
 
+.body-container {
+  position: relative;
+  top: -80px;
+}
+
 .chevron-1 {
   width: 302px;
   height: 508px;
   position: absolute;
   transform: rotate(90deg);
-  top: -28%;
+  top: -230px;
+  left: -75px;
 }
 
 .chevron-2 {
-  width: 70%;
-  height: auto;
+  width: 692px;
+  height: 1380px;
   position: absolute;
   transform: rotate(-90deg);
-  right: 0px;
-  top: 564px;
+  right: -172px;
+  top: 260px;
 }
 
 @media (max-width: 992px) {
   .chevron-1 {
     display: none;
-  }
-}
-
-@media (min-width: 992.1px) and (max-width: 1100px) {
-  .chevron-1 {
-    left: -8%;
-  }
-}
-
-@media (min-width: 1100.1px) and  (max-width: 1200px) {
-  .chevron-1 {
-    left: -7%;
-  }
-}
-
-@media (min-width: 1200.1px) and  (max-width: 1300px) {
-  .chevron-1 {
-    left: -7%;
-  }
-}
-
-@media (min-width: 1300.1px) and  (max-width: 1400px) {
-  .chevron-1 {
-    left: -6%;
-  }
-}
-
-@media (min-width: 1400.1px) and  (max-width: 1500px) {
-  .chevron-1 {
-    left: -6%;
-  }
-}
-
-@media (min-width: 1500.1px) and  (max-width: 1600px) {
-  .chevron-1 {
-    left: -5%;
-  }
-}
-
-@media (min-width: 1600.1px) and  (max-width: 1700px) {
-  .chevron-1 {
-    left: -5%;
-  }
-}
-
-@media (min-width: 1700.1px) and  (max-width: 1800px) {
-  .chevron-1 {
-    left: -5%;
-  }
-}
-
-@media (min-width: 1800.1px) and  (max-width: 1900px) {
-  .chevron-1 {
-    left: -5%;
-  }
-}
-
-@media (min-width: 1900.1px) {
-  .chevron-1 {
-    left: 4%;
   }
 }
 
@@ -212,10 +163,137 @@ button.navbar-toggler:not(.collapsed) div:nth-child(2) {
 }
 
 .body-container .content .heading {
+  margin-top: 160px;
+}
+
+@media (max-width: 992px) {
+  .body-container .content .heading {
+    font-size: 25px !important;
+  }
+}
+
+.body-container .content .heading .text-center div:nth-child(3) {
+  color: #1dcef2;
+}
+
+.timeline .timeline-top {
   position: relative;
-  top: 120px;
-  font: 60px Orbitron !important;
-  font-weight: 1000;
+  border-right: 3px solid #36536c;
+  height: 80px;
+  border-bottom: 3px solid #36536c;
+}
+
+.timeline-top .circle {
+  border: 3px solid #36536c;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  position: absolute;
+  top: -28px;
+  right: -15px;
+}
+
+.timeline-main {
+  border-left: 3px solid #36536c;
+  height: 2000px;
+}
+
+.section-title {
+  position: relative;
+  margin-left: 75px !important;
+}
+
+.section-title .icon {
+  position: absolute;
+  top: -8px;
+  left: -115px;
+  background-color: #082847;
+  padding: 1rem 0 !important;
+}
+
+.section-container .section-detail {
+  position: relative;
+  top: 100px;
+}
+
+.section-detail .diversion-timeline-start {
+  position: absolute;
+  border-top: 3px solid #36536c;
+  top: 8px;
+  left: -6px;
+  width: 96px;
+  -webkit-transform: translateY(-41px) translateX(-10px) rotate(45deg);
+  transform: translateY(-41px) translateX(-10px) rotate(45deg);
+}
+
+.section-detail .diversion-timeline-end {
+  position: absolute;
+  border-top: 3px solid #36536c;
+  bottom: -33px;
+  left: -15px;
+  width: 96px;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.section-detail .section-content {
+  margin-left: 65px;
+  border-left: 3px solid #36536c;
+  padding-top: 50px;
+}
+
+@media (max-width: 992px) {
+  .section-detail .section-content {
+    margin-left: 0px;
+    border-left: none;
+  }
+
+  .diversion-timeline-start, .diversion-timeline-end {
+    display: none;
+  }
+}
+
+.content-detail .text-content {
+  position: relative;
+}
+
+.text-content .circle {
+  border: 3px solid #36536c;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: -15px;
+  background-color: #082847;
+}
+
+.content-detail .img-container {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+  opacity: 1;
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  width: fit-content;
+}
+
+.img-container img {
+  max-width: 400px;
+  max-height: 400px;
+}
+
+@media (max-width: 992px) {
+  .content-detail .img-container {
+    background: none;
+    border-radius: 0;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+
+  .img-container img {
+    position: relative;
+    left: -55px;
+  }
 }
 
 /* Body: END */
